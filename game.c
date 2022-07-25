@@ -22,7 +22,9 @@ void printWinner(char);
 
 // Main function
 int main() {
-
+    char winner = ' ';
+    resetBoard();
+    
     return 0;
 }
 
