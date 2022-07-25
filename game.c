@@ -10,3 +10,8 @@ void playerMove();
 void computerMove();
 char checkWinner();
 void printWinner(char);
+
+int main() {
+    
+    return 0;
+}
