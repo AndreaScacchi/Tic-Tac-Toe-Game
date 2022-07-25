@@ -99,7 +99,21 @@ void playerMove() {
 }
 
 void computerMove() {
+    // Creates a seed based on current time
+    srand(time(0));
+    int x;
+    int y;
 
+    if(checkFreeSpaces() > 0) {
+        do
+        {
+            x = rand() % 3;
+            y = rand() % 3;
+        } while (board[x][y] != ' ');
+        board[x][y] = COMPUTER;
+    } else {
+        printWinner(' ');
+    }
 }
 
 char checkWinner() {
@@ -129,5 +143,11 @@ char checkWinner() {
 }
 
 void printWinner(char winner) {
-
+    if(winner == PLAYER) {
+        printf("YOU WIN!");
+    } else if(winner == COMPUTER) {
+        printf("YOU LOSE!");
+    } else {
+        printf("IT'S A TIE!");
+    }
 }
