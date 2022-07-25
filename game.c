@@ -29,6 +29,15 @@ int main() {
         printBoard();
         playerMove();
         winner = checkWinner();
+        if(winner != ' ' || checkFreeSpaces() == 0) {
+            break;
+        }
+
+        computerMove();
+        winner = checkWinner();
+        if(winner != ' ' || checkFreeSpaces() == 0) {
+            break;
+        }
     }
 
     return 0;
