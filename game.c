@@ -9,4 +9,4 @@ int checkFreeSpaces();
 void playerMove();
 void computerMove();
 char checkWinner();
-void printWinner();
+void printWinner(char);
